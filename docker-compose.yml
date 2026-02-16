@@ -5,7 +5,7 @@ services:
     build: .
     container_name: zhubeautycare_app
     ports:
-      - "5000:5000"
+      - "7007:5000"
     env_file:
       - .env
     volumes:
