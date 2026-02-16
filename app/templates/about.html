@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Tentang Kami | Zhubeautycare{% endblock %}
+
+{% block content %}
+
+<style>
+  .about-hero {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #fdf2f8, #ffffff);
+    text-align: center;
+  }
+
+  .about-section {
+    padding: 90px 0;
+  }
+
+  .about-card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    padding: 40px;
+    transition: 0.3s ease;
+  }
+
+  .about-card:hover {
+    transform: translateY(-8px);
+  }
+</style>
+
+<!-- HERO -->
+<section class="about-hero">
+  <div class="container">
+    <h1 class="fw-bold mb-3">Tentang Zhubeautycare</h1>
+    <p class="text-muted fs-5 mx-auto" style="max-width:700px;">
+      Mengenal lebih dekat brand yang menghadirkan kecantikan
+      dengan kualitas dan kepercayaan.
+    </p>
+  </div>
+</section>
+
+<!-- TENTANG WEBSITE -->
+<section class="about-section bg-white">
+  <div class="container">
+    <div class="about-card text-center mx-auto" style="max-width:900px;">
+      <h2 class="fw-bold mb-4">Tentang Website Ini</h2>
+      <p class="text-muted fs-5">
+        Website Zhubeautycare dibuat untuk memberikan pengalaman belanja
+        kosmetik, skincare, dan aksesoris secara online dengan mudah,
+        cepat, dan nyaman.  
+        Melalui platform ini, pelanggan dapat melihat produk unggulan,
+        mengikuti leaderboard pelanggan terbaik, serta mendapatkan
+        informasi terbaru seputar promo dan koleksi terbaru.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- TENTANG BRAND -->
+<section class="about-section bg-light">
+  <div class="container">
+    <div class="about-card text-center mx-auto" style="max-width:900px;">
+      <h2 class="fw-bold mb-4">Tentang Zhubeautycare</h2>
+      <p class="text-muted fs-5">
+        Zhubeautycare adalah brand yang bergerak di bidang kosmetik,
+        skincare, dan aksesoris kecantikan.  
+        Kami percaya bahwa setiap wanita berhak tampil cantik dan
+        percaya diri setiap hari.
+      </p>
+
+      <p class="text-muted fs-5">
+        Dengan motto <strong>“Cantikmu, Prioritas Kami.”</strong>,
+        kami berkomitmen menghadirkan produk berkualitas,
+        harga terjangkau, dan pelayanan terbaik untuk pelanggan.
+      </p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

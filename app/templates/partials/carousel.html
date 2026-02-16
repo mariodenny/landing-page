@@ -1,0 +1,121 @@
+<style>
+    .product-card img {
+        height: 450px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .carousel-inner {
+        padding: 30px 0;
+    }
+
+    .product-card {
+        transition: 0.4s ease;
+        border: none;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .product-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 50%;
+        padding: 20px;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        background-color: #000;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+</style>
+
+<section class="section-padding bg-white text-center">
+    <div class="container">
+        <h2 class="fw-bold mb-5">Produk Unggulan</h2>
+
+        <div id="productCarousel" class="carousel slide carousel-fade"
+             data-bs-ride="carousel"
+             data-bs-interval="3000">
+
+            <!-- INDICATOR -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0"
+                        class="active"></button>
+                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+
+                <!-- ITEM 1 -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-5">
+                            <div class="card p-3 product-card">
+                                <img src="{{ url_for('static', filename='asset/image/carousel1.jpg') }}"
+                                     class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">Skincare</h5>
+                                    <p class="text-muted">Serum, cream, facial wash premium.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-5">
+                            <div class="card p-3 product-card">
+                                <img src="{{ url_for('static', filename='asset/image/carousel2.jpg') }}"
+                                     class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">Kosmetik</h5>
+                                    <p class="text-muted">Lipstik, cushion, makeup pilihan.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-5">
+                            <div class="card p-3 product-card">
+                                <img src="{{ url_for('static', filename='asset/image/carousel3.jpg') }}"
+                                     class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">Aksesoris</h5>
+                                    <p class="text-muted">Beauty tools & aksesoris stylish.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CONTROL -->
+            <button class="carousel-control-prev" type="button"
+                    data-bs-target="#productCarousel"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button"
+                    data-bs-target="#productCarousel"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+
+    </div>
+</section>

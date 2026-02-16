@@ -1,0 +1,55 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F5EFE6;
+}
+
+.navbar {
+  backdrop-filter: blur(10px);
+}
+
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.btn-brand {
+  background-color: #C8B6A6;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 30px;
+  transition: 0.3s ease;
+}
+
+.btn-brand:hover {
+  background-color: #b59f8f;
+  transform: translateY(-2px);
+}
+
+.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.leaderboard-box {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  max-width: 800px;
+}
+
+footer {
+  background-color: #3E3E3E;
+  color: white;
+  padding: 40px 0;
+}

@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Zhubeautycare{% endblock %}
+
+{% block content %}
+
+<style>
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)),
+      url("{{ url_for('static', filename='asset/image/hero.jpg') }}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+  }
+
+  .hero h1 {
+    font-size: 3.2rem;
+    letter-spacing: 2px;
+  }
+
+  .hero p {
+    max-width: 650px;
+    margin: auto;
+  }
+
+  /* SOFT BACKGROUND */
+  .soft-bg {
+    background: linear-gradient(135deg, #fdf2f8, #ffffff);
+  }
+
+  /* CARD PREMIUM */
+  .premium-card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+  }
+
+  .premium-card:hover {
+    transform: translateY(-10px);
+  }
+
+  /* TESTIMONIAL */
+  .testimonial-card {
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    background: white;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .section-padding {
+    padding: 90px 0;
+  }
+</style>
+
+<!-- HERO -->
+<section class="hero text-center d-flex align-items-center">
+  <div class="container">
+    <h1 class="fw-bold mb-3">Zhubeautycare</h1>
+    <p class="lead mb-2">“Cantikmu, Prioritas Kami.”</p>
+    <p class="mb-4">
+      Kosmetik, skincare, dan aksesoris pilihan untuk menunjang kecantikanmu
+      agar selalu tampil percaya diri setiap hari.
+    </p>
+    <a href="https://wa.me/628xxxx" class="btn btn-brand btn-lg px-4">
+      Order Sekarang
+    </a>
+  </div>
+</section>
+
+{% include 'partials/carousel.html' %}
+
+<!-- TOP CUSTOMER -->
+<section class="section-padding soft-bg text-center">
+  <div class="container">
+    <div class="premium-card p-5">
+      <h2 class="fw-bold mb-3">👑 Top Customer</h2>
+      <p class="text-muted mb-4">
+        Pelanggan dengan total pembelian tertinggi bulan ini akan mendapatkan
+        reward spesial dari Zhubeautycare.
+      </p>
+      <a href="/leaderboard" class="btn btn-brand px-4">
+        Lihat Leaderboard
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section-padding bg-white text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Tentang Zhubeautycare</h2>
+
+    <p class="text-muted fs-5 mx-auto" style="max-width:750px;">
+      Zhubeautycare hadir untuk memberikan pengalaman belanja kosmetik,
+      skincare, dan aksesoris yang nyaman dan terpercaya.
+      Kami percaya bahwa setiap wanita berhak tampil cantik dan percaya diri
+      setiap hari.
+    </p>
+
+    <div class="mt-4">
+      <a href="/about" class="btn btn-outline-dark px-4">
+        Selengkapnya
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section class="section-padding bg-light text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-5">Apa Kata Mereka?</h2>
+
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-md-5">
+        <div class="testimonial-card">
+          <p class="fst-italic mb-3">
+            “Produknya bagus banget dan pengiriman cepat!”
+          </p>
+          <strong>- Sarah</strong>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="testimonial-card">
+          <p class="fst-italic mb-3">
+            “Harga terjangkau tapi kualitas premium.”
+          </p>
+          <strong>- Aulia</strong>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
