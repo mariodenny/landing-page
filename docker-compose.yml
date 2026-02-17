@@ -8,6 +8,29 @@ services:
       - "7007:5000"
     env_file:
       - .env
-    volumes:
-      - .:/app
+    depends_on:
+      - db
     restart: unless-stopped
+    networks:
+      - zhubeauty_net
+
+  db:
+    image: mysql:8.0
+    container_name: zhubeautycare_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - zhubeauty_net
+
+volumes:
+  db_data:
+
+networks:
+  zhubeauty_net:
+    driver: bridge

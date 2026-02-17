@@ -18,22 +18,27 @@
           </tr>
         </thead>
         <tbody>
+          {% for customer in customers %}
           <tr>
-            <td>🥇</td>
-            <td>Denny Mario</td>
-            <td>Rp 5.000.000</td>
+            <td>
+              {% if loop.index == 1 %} 🥇
+              {% elif loop.index == 2 %} 🥈
+              {% elif loop.index == 3 %} 🥉
+              {% else %} {{ loop.index }}
+              {% endif %}
+            </td>
+            <td>{{ customer.name }}</td>
+            <td>
+              Rp {{ "{:,.0f}".format(customer.total_spent|float) }}
+            </td>
           </tr>
+          {% else %}
           <tr>
-            <td>🥈</td>
-            <td>Sarah</td>
-            <td>Rp 3.200.000</td>
+            <td colspan="3">Belum ada data</td>
           </tr>
-          <tr>
-            <td>🥉</td>
-            <td>Aulia</td>
-            <td>Rp 2.750.000</td>
-          </tr>
+          {% endfor %}
         </tbody>
+
       </table>
     </div>
 
