@@ -14,6 +14,18 @@ services:
     networks:
       - zhubeauty_net
 
+  scheduler:
+    build: .
+    container_name: zhubeautycare_scheduler
+    command: sh -c "while true; do python sync_customer_stat.py; sleep 300; done"
+    env_file:
+      - .env
+    depends_on:
+      - db
+    restart: unless-stopped
+    networks:
+      - zhubeauty_net
+
   db:
     image: mysql:8.0
     container_name: zhubeautycare_db
