@@ -1,13 +1,9 @@
 from flask import Blueprint, render_template
 import mysql.connector
 import os
-from dotenv import load_dotenv
-from pathlib import Path
 
 main = Blueprint("main", __name__)
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-load_dotenv(BASE_DIR / ".env")
 
 DB_CONFIG = {
     "host": os.getenv("DB_HOST"),
